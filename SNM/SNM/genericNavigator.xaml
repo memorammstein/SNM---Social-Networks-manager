@@ -1,0 +1,21 @@
+﻿<Window x:Class="SNM.genericNavigator"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="genericNavigator" Background="DimGray" WindowStyle="None" ResizeMode="NoResize" Width="600" Height="390" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <TextBlock Name="tbkViewOnYoutube" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0"
+                   Foreground="White" MouseUp="tbkViewOnYoutube_MouseUp">
+            Ver en Youtube
+        </TextBlock>
+        <TextBlock Name="tbkCerrar" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10,0"
+                   Foreground="White" FontFamily="Arial" MouseUp="tbkCerrar_MouseUp">
+            X
+        </TextBlock>
+        <WebBrowser Name="wbGeneric" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                    Width="600" Height="360" Grid.Row="1"></WebBrowser>
+    </Grid>
+</Window>

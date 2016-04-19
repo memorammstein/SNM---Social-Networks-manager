@@ -1,0 +1,52 @@
+﻿<Grid x:Class="SNM.gridTweet"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Height="100" MinWidth="425" HorizontalAlignment="Stretch" Name="grdTweet" Margin="0,5,0,5">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="80*" />
+        <RowDefinition Height="20*" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="425*" />
+    </Grid.ColumnDefinitions>
+    <StackPanel Name="stkAvatar" Orientation="Vertical" Margin="5,0,5,0">
+        <Image HorizontalAlignment="Center" VerticalAlignment="Top" Name="avatar" Height="50" Width="50" Source="/SNM;component/Iconos/twitter_64.png" Margin="0,5" MouseDown="avatar_MouseDown" />
+    </StackPanel>
+    <StackPanel Grid.Column="1" Margin="1" Orientation="Vertical" Grid.RowSpan="2" HorizontalAlignment="Stretch">
+        <StackPanel Name="stkScreenNames" Orientation="Horizontal" Height="25">
+            <TextBlock Name="tbkSreenName" FontSize="13" FontWeight="Bold" VerticalAlignment="Bottom" MouseDown="tbkSreenName_MouseDown">NombreDeUsuario</TextBlock>
+            <TextBlock Name="tbkFullName" FontSize="11" VerticalAlignment="Bottom" Foreground="Gray" Margin="5,0,0,0" FontFamily="Arial">Nombre completo</TextBlock>
+            <StackPanel Orientation="Horizontal" Margin="15,0,0,0" Name="stkRetweeted">
+                <Image Name="avatarRetweeted" Height="25" Width="25" Source="/SNM;component/Iconos/twitter_64.png"></Image>
+                <TextBlock Name="retweetedScreenName" Margin="5,0,2,0" FontSize="12" VerticalAlignment="Bottom" Foreground="Gray">
+                    RT: UsuarioRetweet
+                </TextBlock>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Name="stkStatus" Orientation="Vertical" HorizontalAlignment="Stretch">
+            <TextBox Name="tbkStatus" TextWrapping="Wrap" FontFamily="Arial" HorizontalAlignment="Left" Margin="0,5,0,0"
+                     IsReadOnly="True" Foreground="White" BorderThickness="0">
+                <TextBox.Background>
+                    <SolidColorBrush />
+                </TextBox.Background>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini
+            </TextBox>
+        </StackPanel>
+        
+    </StackPanel>
+    <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+        <TextBlock Name="tbkDate" FontSize="10" MouseDown="tbkDate_MouseDown">2 nov</TextBlock>
+        <TextBlock Name="tbkSource" FontSize="10" Margin="10,0,0,0" MouseDown="tbkSource_MouseDown">social-networks-manager</TextBlock>
+    </StackPanel>
+    <StackPanel Grid.Row="1" Name="tweetActions" Orientation="Horizontal" HorizontalAlignment="Center">
+        <Image Name="respuesta" Source="Iconos/reply.png" MouseDown="respuesta_MouseDown"
+               Height="16" Width="16" Style="{StaticResource ImageButton}" />
+        <Image Name="favorito" Source="Iconos/favorite.png" MouseDown="favorito_MouseDown"
+               Height="16" Width="16" Style="{StaticResource ImageButton}" />
+        <Image Name="retweet" Source="Iconos/retweet.png" MouseDown="retweet_MouseDown"
+               Height="16" Width="16" Style="{StaticResource ImageButton}" />
+    </StackPanel>
+</Grid>

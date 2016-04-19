@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="SNM.multiManager"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d"
+      HorizontalAlignment="Stretch"
+      Name="gridMultiManager"
+      xmlns:my="clr-namespace:SNM"
+      MouseUp="gridMultiManager_MouseUp">
+    <Grid>
+    <TabControl Name="tabPestañas">
+        <TabControl.Resources>
+            <Style TargetType="{x:Type TabPanel}">
+                <Setter Property="HorizontalAlignment" Value="Center" />
+            </Style>
+        </TabControl.Resources>
+        <TabItem Name="tabWall"  Height="30" KeyUp="tabWall_KeyUp">
+            <TabItem.Header>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Iconos/face_16_blue.png" Margin="0,0,5,0"
+                           Width="16" Height="16"></Image>
+                    <TextBlock Margin="1" VerticalAlignment="Center">
+                        Muro
+                    </TextBlock>
+                </StackPanel>
+            </TabItem.Header>
+            <ListBox Name="lstWall"/>
+        </TabItem>
+        <TabItem Name="tabTimeline" KeyUp="tabTimeline_KeyUp"  Height="30">
+            <TabItem.Header>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Iconos/bird_16_blue.png" Margin="0,0,5,0"
+                           Width="16" Height="16"></Image>
+                    <TextBlock Margin="1" VerticalAlignment="Center">Timeline</TextBlock>
+                </StackPanel>
+            </TabItem.Header>
+            <ListBox Name="lstTimeline"/>
+        </TabItem>
+        <TabItem Name="tabYoutube" Height="30" KeyUp="tabYoutube_KeyUp">
+            <TabItem.Header>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Iconos/tube_16_blue.png" Margin="0,0,5,0"
+                           Width="16" Height="16"></Image>
+                    <TextBlock Margin="1" VerticalAlignment="Center">Subscripciones</TextBlock>
+                </StackPanel>
+            </TabItem.Header>
+            <ListBox Name="lstSubscripciones" />
+        </TabItem>
+    </TabControl>
+</Grid>
+</UserControl>

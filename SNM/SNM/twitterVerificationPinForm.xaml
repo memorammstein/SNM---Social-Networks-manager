@@ -1,0 +1,30 @@
+﻿<Window x:Class="SNM.twitterVerificationPinForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Social Networks Manager"
+        Height="215" Width="315"
+        Background="#FF1A1A1A"
+        WindowStartupLocation="CenterScreen"
+        Icon="/SNM;component/SNM_icon.ico"
+        WindowStyle="None"
+        ResizeMode="NoResize" Loaded="Window_Loaded" Name="frmPin">
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock HorizontalAlignment="Center" Name="tbkPIN"
+                       Foreground="White" FontSize="30" FontStretch="UltraExpanded">PIN</TextBlock>
+            <TextBlock HorizontalAlignment="Center" Name="tbkCondición"
+                       Foreground="White" FontSize="12" FontStretch="UltraExpanded"
+                        Margin="0,5,0,0">conformado por 7 dígitos</TextBlock>
+            <TextBox TextAlignment="Center" Name="txtPIN" FontSize="44" FontFamily="Courier New"
+                     VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="200"
+                     FontWeight="ExtraBold" Margin="0,15,0,15" PreviewKeyDown="txtPIN_PreviewKeyDown">
+                <TextBox.ContextMenu>
+                    <ContextMenu>
+                        Solo se pueden ingresar 7 dígitos a traves del teclado
+                    </ContextMenu>
+                </TextBox.ContextMenu>
+            </TextBox>
+            <Button Name="btnPIN" Click="btnPIN_Click" Height="35" Width="100" Margin="0,5,0,10">Enviar</Button>
+        </StackPanel>
+    </Grid>
+</Window>

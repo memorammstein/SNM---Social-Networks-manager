@@ -1,0 +1,11 @@
+﻿<Window x:Class="SNM.uriVisual"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SNM"
+        WindowStartupLocation="CenterScreen"
+        Name="frmBrowser"
+        Icon="/SNM;component/SNM_icon.ico" ResizeMode="NoResize">
+    <Grid>
+        <Image Name="uriVisualizerImage" HorizontalAlignment="Center" VerticalAlignment="Center" Source="Images/m3m0.jpg"></Image>
+    </Grid>
+</Window>

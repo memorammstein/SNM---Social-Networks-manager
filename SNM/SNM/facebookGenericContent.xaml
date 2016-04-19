@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="SNM.facebookGenericContent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             MaxWidth="500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="400*" />
+        </Grid.ColumnDefinitions>
+        <Image Name="contentImage" Width="90" Margin="0,5"
+               VerticalAlignment="Top" HorizontalAlignment="Center"
+               Source="Iconos/facebook_64_off.png" StretchDirection="DownOnly" MouseUp="contentImage_MouseUp"></Image>
+        <StackPanel Name="stkContentData" Orientation="Vertical" Grid.Column="1">
+            <TextBlock Name="tbkName" FontWeight="Bold" Foreground="#FFEBEBEB" FontSize="13" Margin="0,5,0,0" MouseUp="tbkName_MouseUp">
+                Social Networks Manager
+            </TextBlock>
+            <TextBlock Name="tbkCaption" TextWrapping="Wrap" Foreground="Gray" Margin="0,5,0,10">
+                social-networks-manager.blogspot.com
+            </TextBlock>
+            <TextBlock Name="tbkDescription" TextWrapping="Wrap" Foreground="Gray">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini
+            </TextBlock>
+        </StackPanel>
+    </Grid>
+</UserControl>

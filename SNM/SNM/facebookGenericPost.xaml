@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="SNM.facebookGenericPost"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" MinWidth="575" HorizontalAlignment="Stretch" Height="Auto">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60" />
+            <ColumnDefinition Width="725*" />
+        </Grid.ColumnDefinitions>
+        <Image Height="50" HorizontalAlignment="Center" VerticalAlignment="Top" Name="userPicture"
+               Stretch="Fill" Margin="0,10,0,0" Width="50" Source="/SNM;component/Iconos/facebook_64.png" MouseUp="userPicture_MouseUp" />
+        <StackPanel Name="stkUserData" Orientation="Horizontal" VerticalAlignment="Top" 
+                    Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,0,0">
+            <TextBlock Name="tbkUserName" Text="Guillermo Jiménez" FontSize="16" VerticalAlignment="Bottom" FontWeight="Bold" MouseUp="tbkUserName_MouseUp" />
+            <TextBlock Name="tbkUserUsername" Text="memorammstein" FontSize="13" VerticalAlignment="Bottom" Margin="10,0"/>
+        </StackPanel>
+        <StackPanel Name="stkAllData" Orientation="Vertical" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,40,10,0"
+                    VerticalAlignment="Top">
+            <StackPanel Name="stkContent" Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+                <TextBlock Name="tbkContent" FontFamily="Arial" TextWrapping="Wrap">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini
+                </TextBlock>
+                <StackPanel Name="stkPersonalizedControl" Orientation="Vertical" HorizontalAlignment="Left" Margin="0,10">
+                </StackPanel>
+            </StackPanel>
+            
+        </StackPanel>
+        <StackPanel Name="stkAdditionalData" Grid.Column="1" Orientation="Vertical"
+                    HorizontalAlignment="Stretch" Grid.Row="1" VerticalAlignment="Bottom" Margin="10,5,0,0">
+            <StackPanel Name="stkData" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,5">
+                <TextBlock Name="tbkLike" Margin="0,0,10,0" FontSize="11" VerticalAlignment="Bottom" MouseUp="tbkLike_MouseUp">Like</TextBlock>
+                
+                <TextBlock Name="tbkDate" VerticalAlignment="Bottom" Margin="10,0,10,0" FontSize="11" Foreground="Gray" MouseUp="tbkDate_MouseUp">
+                        33 de noviembre del 2311   5:24:42pm
+                </TextBlock>
+            </StackPanel>
+            <StackPanel Name="stkComments" Orientation="Vertical" HorizontalAlignment="Stretch">
+                <!--Margin="0,10"-->
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

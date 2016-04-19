@@ -1,0 +1,8 @@
+﻿<Grid x:Class="SNM.verifiedImage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Name="gridVerified">
+    <Image VerticalAlignment="Bottom" Name="verified" Height="16" Width="16" Source="Iconos/verified.png" Margin="0,0,2,0" />
+</Grid>

@@ -1,0 +1,24 @@
+﻿<Window x:Class="SNM.Warning"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SNM - warning"
+        Height="350"
+        Width="500"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="#FF1A1A1A"
+        KeyUp="Window_KeyUp"
+        Icon="/SNM;component/SNM_icon.ico"
+        WindowStyle="None">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="197*" />
+            <RowDefinition Height="64*" />
+        </Grid.RowDefinitions>
+            <TextBlock Name="tbkWarning" HorizontalAlignment="Stretch" Margin="50,25" TextWrapping="Wrap" FontSize="16"
+                       Foreground="White" TextAlignment="Center" VerticalAlignment="Center" FontWeight="SemiBold">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </TextBlock>
+        <Button Name="btnAceptarAdvertencia" Content="Aceptar" Grid.Row="1" Width="100" Height="35" Click="btnAceptarAdvertencia_Click" />
+    </Grid>
+</Window>

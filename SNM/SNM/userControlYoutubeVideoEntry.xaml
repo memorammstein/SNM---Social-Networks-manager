@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="SNM.userControlYoutubeVideoEntry"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" MinWidth="575" HorizontalAlignment="Stretch" Name="uctrlYoutubeEntry" Margin="0,5,0,5">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="270" />
+            <RowDefinition Height="95" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="360" />
+            <ColumnDefinition Width="390" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Name="stkAllData" Orientation="Vertical" VerticalAlignment="Stretch" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <StackPanel Name="stkData" Orientation="Horizontal" Margin="0">
+                <Image Name="mainImage" Width="360" Height="270" Source="/SNM;component/Images/192719299.jpg" MouseDown="mainImage_MouseDown"></Image>
+                <StackPanel Name="stkImages" Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0" />
+            </StackPanel>
+            <TextBox Name="txtDescripcion" FontFamily="Arial" TextWrapping="Wrap" IsReadOnly="True" Foreground="White"
+                     ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalAlignment="Stretch"
+                     HorizontalAlignment="Left" Height="75" Width="750" BorderBrush="Transparent" BorderThickness="0,1" Margin="0,10" Background="{Binding ElementName=uctrlYoutubeEntry}">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini
+            </TextBox>
+        </StackPanel>
+        <StackPanel Name="stkMainVideoData" Orientation="Vertical" Grid.Column="1" Margin="10,0,0,0" Grid.RowSpan="2">
+            <TextBlock Name="tbkTitle" FontSize="17" TextWrapping="Wrap">
+                MIXBITS: Modern Warfare 3 | No mas Flash Móvil | Arkham City | Skyward Sword | Battlefield 3
+            </TextBlock>
+            <TextBlock Name="tbkUploader" Margin="0,0,0,2" FontSize="13" Foreground="#E3E3E3">YayoGutierrez</TextBlock>
+            <TextBlock Name="tbkViewCount" Foreground="Gray" FontSize="11">100,000 reproducciones</TextBlock>
+        </StackPanel>
+        
+        <TextBlock Name="tbkDuration" Text="15:27" FontSize="26" Foreground="#FFC7C7C7" VerticalAlignment="Bottom" HorizontalAlignment="Right" TextAlignment="Center" Background="#C0000000"></TextBlock>
+    </Grid>
+</UserControl>
